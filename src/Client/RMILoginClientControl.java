@@ -1,5 +1,7 @@
 package Client;
 
+import Server.RMILoginInterface;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.NotBoundException;

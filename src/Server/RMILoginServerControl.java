@@ -1,12 +1,18 @@
 package Server;
 
+import Client.User;
+
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-public class RMILoginServerControl {
+public class RMILoginServerControl extends UnicastRemoteObject implements RMILoginInterface {
 
     private int serverPort = 1234;
     private Registry registry;
@@ -20,7 +26,7 @@ public class RMILoginServerControl {
         try {
             //
             registry = LocateRegistry.createRegistry(serverPort);
-            registry.rebind(rmService,this);
+            registry.rebind(rmService, this);
         }catch (RemoteException e){
             throw e;
         }
@@ -37,5 +43,24 @@ public class RMILoginServerControl {
         } catch(Exception e) {
             view.showMessage(e.getStackTrace().toString());
         }
+    }
+
+    private boolean checkUser(User user){
+        String sql = "SELECT * FROM users WHERE username ='" + user.getUsername() + "' AND password ='" + user.getPassword() +"'";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs.next()){
+                return true;
+            }
+        } catch (Exception e) {
+            view.showMessage(e.getStackTrace().toString());
+        }
+        return false;
+    }
+    public String checkLogin(User user) throws RemoteException{
+        String result = "";
+        if(checkUser(user)) result = "true";
+        return result;
     }
 }

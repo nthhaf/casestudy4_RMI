@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0364e92f-1a45-4f6a-8628-507eba669821" name="Changes" comment="" />
+    <list default="true" id="0364e92f-1a45-4f6a-8628-507eba669821" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/RMILoginClientControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RMILoginClientControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/RMILoginServerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/RMILoginServerControl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
