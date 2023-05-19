@@ -7,6 +7,6 @@ public class ServerRun {
             RMILoginServerControl controller = new RMILoginServerControl(view);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
     }
 }

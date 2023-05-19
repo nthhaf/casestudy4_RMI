@@ -13,16 +13,16 @@ public class RMILoginClientControl {
     private RMILoginClientView view;
     private String serverHost = "localhost";
     private int serverPort = 1234;
-    private RMILoginInterface rmServer;
+    private RMILoginInterface rmiServer;
     private Registry registry;
-    private String rmService = "rmLoginServer";
+    private String rmiService = "rmiLoginServer";
 
     public RMILoginClientControl(RMILoginClientView view){
         this.view = view;
         view.addLoginListener(new LoginListener());
         try {
             registry = LocateRegistry.getRegistry(serverHost,serverPort);
-            rmServer =(RMILoginInterface) registry.lookup(rmService);
+            rmiServer =(RMILoginInterface) registry.lookup(rmiService);
         }catch (RemoteException e){
             view.showMessage(e.getStackTrace().toString());
             e.printStackTrace();
@@ -36,7 +36,7 @@ public class RMILoginClientControl {
         public void actionPerformed(ActionEvent e) {
             try {
                 User user = view.getUser();
-                if(rmServer.checkLogin(user).equals("true")){
+                if(rmiServer.checkLogin(user).equals("true")){
                     view.showMessage("Login Successfully!");
                 }else {
                     view.showMessage("Invalid username and/or password!");

@@ -2,7 +2,6 @@ package Server;
 
 import Client.User;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -18,7 +17,7 @@ public class RMILoginServerControl extends UnicastRemoteObject implements RMILog
     private Registry registry;
     private Connection conn;
     private RMILoginServerView view;
-    private String rmService = "rmLoginServer";
+    private String rmiService = "rmiLoginServer";
 
     public RMILoginServerControl(RMILoginServerView view) throws RemoteException {
         this.view = view;
@@ -26,7 +25,7 @@ public class RMILoginServerControl extends UnicastRemoteObject implements RMILog
         try {
             //
             registry = LocateRegistry.createRegistry(serverPort);
-            registry.rebind(rmService, this);
+            registry.rebind(rmiService, this);
         }catch (RemoteException e){
             throw e;
         }
@@ -40,17 +39,19 @@ public class RMILoginServerControl extends UnicastRemoteObject implements RMILog
             Class.forName(dbClass);
             conn = DriverManager.getConnection(url,username,password);
 
+
         } catch(Exception e) {
             view.showMessage(e.getStackTrace().toString());
         }
     }
 
     private boolean checkUser(User user){
-        String sql = "SELECT * FROM users WHERE username ='" + user.getUsername() + "' AND password ='" + user.getPassword() +"'";
+        String sqlQuery = "SELECT * FROM users WHERE username ='" + user.getUsername() + "' AND password ='" + user.getPassword() +"'";
         try {
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(sqlQuery);
             if(rs.next()){
+                System.out.println("OK OK OK ");
                 return true;
             }
         } catch (Exception e) {
