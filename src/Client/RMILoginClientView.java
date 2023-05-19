@@ -44,4 +44,21 @@ public class RMILoginClientView extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
 
     }
+
+    public User getUser()
+    {
+        User user = new User(txtUsername.getText(),txtPassword.getText());
+        return user;
+    }
+    public  void showMessage(String msg)
+    {
+
+        JOptionPane.showMessageDialog(this,msg);
+    }
+
+    public void addLoginListener(ActionListener e)
+    {
+
+        btnLogin.addActionListener(e);
+    }
 }

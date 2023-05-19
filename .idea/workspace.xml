@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0364e92f-1a45-4f6a-8628-507eba669821" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/casestudy4_RMI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/ClientRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/RMILoginClientControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/RMILoginClientView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/RMILoginInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/RMILoginServerControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/RMILoginServerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/ServerRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/RMILoginClientControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RMILoginClientControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/RMILoginClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/RMILoginClientView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/RMILoginInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/RMILoginInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/RMILoginServerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/RMILoginServerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
