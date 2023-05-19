@@ -1,5 +1,5 @@
+DROP DATABASE IF EXISTS `userinfo`;
 CREATE DATABASE userinfo;
-
 USE userinfo;
 
 CREATE TABLE users (
