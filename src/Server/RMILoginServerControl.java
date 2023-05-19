@@ -21,11 +21,13 @@ public class RMILoginServerControl extends UnicastRemoteObject implements RMILog
 
     public RMILoginServerControl(RMILoginServerView view) throws RemoteException {
         this.view = view;
-        getDBConnection("users","root","root");
+        getDBConnection("users","root","#########");
         try {
-            //
+
             registry = LocateRegistry.createRegistry(serverPort);
             registry.rebind(rmiService, this);
+            System.out.println("RMILoginServer started.");
+
         }catch (RemoteException e){
             throw e;
         }
@@ -51,7 +53,7 @@ public class RMILoginServerControl extends UnicastRemoteObject implements RMILog
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sqlQuery);
             if(rs.next()){
-                System.out.println("OK OK OK ");
+//                System.out.println("OK OK OK ");
                 return true;
             }
         } catch (Exception e) {
