@@ -38,23 +38,6 @@ public class RMILoginClientView extends JFrame implements ActionListener {
                 System.exit(0);
             }
         });
-
-//        setTitle("Login MVC");
-//        setSize(300, 200);
-//        setLocationRelativeTo(null);
-//        setDefaultCloseOperation(EXIT_ON_CLOSE);
-//
-//        setLayout(new GridLayout(3, 2));
-//
-//        JLabel labelUsername = new JLabel("Username:");
-//        add(labelUsername);
-//
-//        add(txtUsername);
-//        JLabel labelPassword = new JLabel("Password:");
-//        add(labelPassword);
-//        add(txtPassword);
-//        btnLogin = new JButton("Login");
-
     }
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
